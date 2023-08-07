@@ -35,9 +35,7 @@ const Menu = () => {
       <Text>{"\n"}</Text>
       <Text>{"\n"}</Text>
       <Text>{"\n"}</Text>
-      <Link href="/kviz" style={styles.link}>
-        <Image source={require("../assets/kviz.png")} style={styles.img} />
-      </Link>
+     
       <Link href="/info" style={styles.link}>
       <AntDesign name="infocirlceo" size={34} color="grey" style={{textAlign:"center"}}/>
       </Link>
