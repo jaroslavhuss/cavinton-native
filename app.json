@@ -16,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jaroslav.huss.cavinton2023"
     },
     "android": {
       "adaptiveIcon": {
@@ -30,6 +31,14 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f16d82a4-0e24-4567-bc4e-b4d4e4b4d3b5"
+      }
+    }
   }
 }

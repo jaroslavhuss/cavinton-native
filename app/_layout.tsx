@@ -5,10 +5,34 @@ import Menu from '../components/Menu';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Asset } from 'expo-asset';
+import { usePathname } from 'expo-router';
 export default function HomeLayout() {
     const [height, setHeight] = useState<number>(Dimensions.get("screen").height);
     const [width, setWidth] = useState(Dimensions.get("screen").width);
 
+    const pathName = usePathname();
+
+    useEffect(() => {
+      (async()=>{
+      try {
+        await fetch("https://private.gswps.eu:10443/api/cavinton-ipads",{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            data:{
+              screen: pathName,
+              event:"undefined",
+              content:"undefined"
+            }
+          }),
+        })
+      } catch (error) {
+        //Nah, nothing!
+      }
+      })()
+    }, [pathName])
     useEffect(() => {
         const subscription = Dimensions.addEventListener(
           "change",
