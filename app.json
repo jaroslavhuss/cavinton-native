@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "cavinton2023",
+    "name": "Cavinton",
     "slug": "cavinton2023",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "scheme": "your-app-scheme",
@@ -30,7 +30,8 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ],
     "extra": {
       "router": {
